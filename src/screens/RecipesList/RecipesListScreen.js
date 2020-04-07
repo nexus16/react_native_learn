@@ -35,8 +35,8 @@ export default class RecipesListScreen extends React.Component {
   );
 
   render() {
-    const { navigation } = this.props;
-    const item = navigation.getParam('category');
+    const { navigation, route } = this.props;
+    const item = route.params.category;
     const recipesArray = getRecipes(item.id);
     return (
       <View>

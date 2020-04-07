@@ -21,11 +21,11 @@ import HomeScreen from './src/screens/Home/HomeScreen';
 import DrawerContainer from './src/screens/DrawerContainer/DrawerContainer';
 
 import CategoriesScreen from './src/screens/Categories/CategoriesScreen';
-// import RecipeScreen from './src/screens/Recipe/RecipeScreen';
-// import RecipesListScreen from './src/screens/RecipesList/RecipesListScreen';
-// import IngredientScreen from './src/screens/Ingredient/IngredientScreen';
-// import SearchScreen from './src/screens/Search/SearchScreen';
-// import IngredientsDetailsScreen from './src/screens/IngredientsDetails/IngredientsDetailsScreen';
+import RecipeScreen from './src/screens/Recipe/RecipeScreen';
+import RecipesListScreen from './src/screens/RecipesList/RecipesListScreen';
+import IngredientScreen from './src/screens/Ingredient/IngredientScreen';
+import SearchScreen from './src/screens/Search/SearchScreen';
+import IngredientsDetailsScreen from './src/screens/IngredientsDetails/IngredientsDetailsScreen';
 
 const Stack = createStackNavigator();
 function MainNavigator({ navigation }) {
@@ -40,13 +40,13 @@ function MainNavigator({ navigation }) {
           }
       }}
     >
-      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name='Search' component={SearchScreen} />
       <Stack.Screen name='Categories' component={CategoriesScreen}/>
-      {/* <Stack.Screen name='Recipe' component={RecipeScreen}/> */}
-      {/* <Stack.Screen name='RecipesList' component={RecipesListScreen} /> */}
-      {/* <Stack.Screen name='Ingredient' component={IngredientScreen} /> */}
-      {/* <Stack.Screen name='Search' component={SearchScreen} /> */}
-      {/* <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} /> */}
+      <Stack.Screen name='Home' component={HomeScreen} />
+      <Stack.Screen name='Recipe' component={RecipeScreen}/>
+      <Stack.Screen name='RecipesList' component={RecipesListScreen} />
+      <Stack.Screen name='Ingredient' component={IngredientScreen} />
+      <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} />
     </Stack.Navigator>
   )
 }
@@ -71,3 +71,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+console.disableYellowBox = true;

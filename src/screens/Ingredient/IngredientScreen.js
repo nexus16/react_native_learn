@@ -17,7 +17,7 @@ import {
 export default class IngredientScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      title: navigation.getParam('name')
+      title: route.params.name
     };
   };
 
@@ -42,10 +42,10 @@ export default class IngredientScreen extends React.Component {
   );
 
   render() {
-    const { navigation } = this.props;
-    const ingredientId = navigation.getParam('ingredient');
+    const { navigation, route } = this.props;
+    const ingredientId = route.params.ingredient;
     const ingredientUrl = getIngredientUrl(ingredientId);
-    const ingredientName = navigation.getParam('name');
+    const ingredientName = route.params.name;
     return (
       <ScrollView style={styles.mainContainer}>
         <View style={{ borderBottomWidth: 0.4, marginBottom: 10, borderBottomColor: 'grey' }}>

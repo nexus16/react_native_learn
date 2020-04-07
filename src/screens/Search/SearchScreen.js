@@ -65,6 +65,7 @@ export default class SearchScreen extends React.Component {
   }
 
   componentDidMount() {
+    console.log('search screen')
     const { navigation } = this.props;
     navigation.setParams({
       handleSearch: this.handleSearch,
@@ -112,14 +113,7 @@ export default class SearchScreen extends React.Component {
   render() {
     return (
       <View>
-        <FlatList
-          vertical
-          showsVerticalScrollIndicator={false}
-          numColumns={2}
-          data={this.state.data}
-          renderItem={this.renderRecipes}
-          keyExtractor={item => `${item.recipeId}`}
-        />
+        <Text>dadasdsa</Text>
       </View>
     );
   }
